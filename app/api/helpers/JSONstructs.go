@@ -13,17 +13,17 @@ type ErrorJSONResponse struct{
 }
 
 type UserLoginResponse struct{
-	UserID string `json:UserID`
-	Email string `json:Email`
-	FirstName string `json:FirstName`
-	LastName string `json:LastName`
-	IsAdmin bool `json:IsAdmin`
-	IsSuperUser bool `json:IsSuperUser`
-	CSRF string `json:Token`
+	UserID string `json:"UserID"`
+	Email string `json:"Email"`
+	FirstName string `json:"FirstName"`
+	LastName string `json:"LastName"`
+	IsAdmin bool `json:"IsAdmin"`
+	IsSuperUser bool `json:"IsSuperUser"`
+	CSRF string `json:"Token"`
 }
 
 type UserLoginRequest struct{
-	Email string `json:Email`
-	CSRF string `json:Token`
-	Pass string `json:Pass`
+	Email string `json:"Email"`
+	CSRF string `json:"Token"`
+	Pass string `json:"Pass"`
 }
