@@ -14,7 +14,13 @@ import (
 )
 
 func(route *Routes) Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("TEST")
+	
+	db := route.DB
+	result, err := db.Query("SELECT from tblTEST where id = 1",1)
+	if err != nil{
+		log.Println(err)
+	}
+	fmt.Println("TEST:", result)
 	payload := helpers.ErrorJSONResponse{Error:false, Message: "All good"}
 
 

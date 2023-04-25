@@ -39,7 +39,7 @@ func (app *Config) StartRouter() http.Handler { // Change the receiver to (*Conf
 
 
 	//Pass the mux to routes to use.
-	routes.RouteDigest(mux)
+	routes.RouteDigest(mux, app.DB)
 	
 	return mux
 }
